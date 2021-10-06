@@ -83,22 +83,22 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Status</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body fs-3">
+        Saved Successfully....!!!!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <a href="/"><button type="button" class="btn btn-primary">Ok</button></a>
       </div>
     </div>
   </div>
 </div>
 
 <h1 align="center">Get In Touch</h1>
-<form action="/contact" method="POST">
+<form action="/contact" method="POST" onsubmit="return myfun()">
 <div class="container asd">
   <div class="inputs">
     <input type="text" id="name" name="name" required>
@@ -112,7 +112,7 @@
 
   <div class="inputs">
     <input type="number" id="phone" name="phone" required>
-    <label for="name">Phone</label>
+    <label for="phone">Phone</label>
   </div>
 
   <div class="inputs">
@@ -122,7 +122,7 @@
 
   <div class="form-field col-lg-12">
     
-      <button type="submit" class="btn btn-success" value="submit" data-bs-toggle="modal" data-bs-target="#add">Submit</button>
+      <button type="submit" id="messages" class="btn btn-success" value="submit" data-bs-toggle="modal" data-bs-target="#add">Submit</button>
   
 </div>
       
@@ -130,3 +130,25 @@
 
 </div>
 </form>
+
+<script>
+  function myfun(){
+    var a=document.getElementById("phone").value;
+    if(a==""){
+      document.getElementById("messages").innerHTML="** Please fill Mobile Number";
+      return false;
+    }
+    if(isNaN(a)){
+      document.getElementById("messages").innerHTML="** only numbers are allowed";
+      return false;
+    }
+    if(a.length=>10){
+      document.getElementById("messages").innerHTML="** Mobile number must be 10 digit";
+      return false;
+    }
+    if(a.charAt(0)!=9) && (a.charAt(0)!=8) && (a.charAt(0)!=7)){
+      document.getElementById("messages").innerHTML="mobile number must start with 9,8,7";
+      return false;
+    }
+  }
+</script>
