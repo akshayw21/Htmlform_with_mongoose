@@ -1,5 +1,5 @@
 
-<h1 class="mt-3" align="center">Get In Touch</h1>
+<!--<h1 class="mt-3" align="center">Get In Touch</h1>
 <div class="container mt-5 text-light">
   
 
@@ -9,33 +9,124 @@
 <form action="/contact" method="POST" class="mt-5 fs-5">
   
 
-  <div class="row mb-3">
+  <div class="row mb-3 form-field">
     <label for="name" class="col-sm-7 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text"  id="name" name="name" style="width: 50%;" required> 
+      <input type="text"  class="input-text" id="name" name="name" style="width: 50%;" required> 
     </div>
   </div>
-  <div class="row mb-3">
+  <div class="row mb-3 form-field">
     <label for="email" class="col-sm-7 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email"  id="email" name="email" style="width: 50%;" required>
+      <input type="email"  class="input-text" id="email" name="email" style="width: 50%;" required>
     </div>
   </div>
 
-  <div class="row mb-3">
+  <div class="row mb-3 form-field">
     <label for="phone" class="col-sm-7 col-form-label">Phone</label>
     <div class="col-sm-10">
-      <input type="number"  id="phone" name="phone" style="width: 50%;" required>
+      <input type="number"  id="phone" class="input-text" name="phone" style="width: 50%;" required>
     </div>
   </div>
   
-  <div class="row mb-3">
+  <div class="row mb-3 form-field">
     <label for="msg" class="col-sm-7 col-form-label">Message</label>
     <div class="col-sm-10">
-      <input type="text"  id="msg" name="msg" style="width: 50%;" required>
+      <input type="text"  id="msg" class="input-text" name="msg" style="width: 50%;" required>
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+</div>-->
+
+<!--<form action="/contact" method="POST" class="get_in_touch">
+  <h1 class="title">get in touch</h1>
+<div class="container">
+  <div class="form">
+    <div class="form-field col-lg-6">
+      <input id="name" class="input-text" name="name" autocomplete="off" type="text">
+      <label for="name" class="label-name">
+        <span class="content-name">Name</span></label>
+    </div>
+
+    <div class="form-field col-lg-6">
+      <input id="name" class="input-text" name="name" type="text">
+      <label for="name" class="label-name">
+        <span class="content-name">Name</span></label>
+    </div>
+
+
+    <div class="form-field col-lg-6">
+      <input id="phone" class="input-text" name="phone" type="number">
+      <label for="phone" class="label-name">Phone</label>
+    </div>
+
+    <div class="form-field col-lg-6">
+      <input id="message" class="input-text" name="message" type="text">
+      <label for="message" class="label-name">Message</label>
+    </div>
+
+
+    <div class="form-field col-lg-12">
+      <input class="submit-btn" type="submit" value="submit" >
+    </div>
+
+
+  </div>
 </div>
+</form>-->
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1 align="center">Get In Touch</h1>
+<form action="/contact" method="POST">
+<div class="container asd">
+  <div class="inputs">
+    <input type="text" id="name" name="name" required>
+    <label for="name">Name</label>
+  </div>
+
+  <div class="inputs">
+    <input type="email" id="email" name="email" required>
+    <label for="name">Email</label>
+  </div>
+
+  <div class="inputs">
+    <input type="number" id="phone" name="phone" required>
+    <label for="name">Phone</label>
+  </div>
+
+  <div class="inputs">
+    <input type="text" id="msg" name="msg" required>
+    <label for="msg">Message</label>
+  </div>
+
+  <div class="form-field col-lg-12">
+    
+      <button type="submit" class="btn btn-success" value="submit" data-bs-toggle="modal" data-bs-target="#add">Submit</button>
+  
+</div>
+      
+  </div>
+
+</div>
+</form>
