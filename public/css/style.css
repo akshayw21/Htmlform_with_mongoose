@@ -248,6 +248,13 @@ label{
 
 }
 
+#popup{
+    font-size: 20px;
+    color:green;
+}
 
+.failed{
+    font-size: 20px;
+    color:red;
 
-
+}

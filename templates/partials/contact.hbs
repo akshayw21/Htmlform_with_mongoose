@@ -99,7 +99,7 @@
 
 <h1 align="center">Get In Touch</h1>
 <form action="/contact" method="POST">
-<div class="container asd">
+<div class="container  asd p-5">
   <div class="inputs">
     <input type="text" id="name" name="name" pattern="[a-z]{0,10}" required>
     <label for="name">Name</label>
@@ -113,10 +113,12 @@
   <div class="inputs">
     <input type="text" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required>
     <label for="phone">Phone</label>
+    <br>
     <p id="result"></p>
   </div>
 
-  <div class="inputs">
+<br>
+  <div class="inputs mt-2">
     <input type="text" id="msg" name="msg" required>
     <label for="msg">Message</label>
   </div>
@@ -124,7 +126,11 @@
   <div class="form-field col-lg-12">
     
       <button type="submit" id="messages" onclick="check()" class="btn btn-success" value="submit" data-bs-toggle="modal" data-bs-target="#">Submit</button>
-  
+
+      <br>
+      <br>
+      <p id="popup"></p>
+      <p ></p>
 </div>
       
   </div>
@@ -158,12 +164,17 @@
 function check(){
   var num=document.getElementById("phone").value;
   var result=document.getElementById('result');
+  var popup=document.getElementById('popup');
+  var failed=document.getElementsByClassName('failed');
+  
 
   if(num.length==10){
-    result.innerHTML="correct";
+    result.innerHTML="<p style='color: green; font-size: 15px;'>correct";
+    popup.innerHTML="Saved Successfully....!!!!. ";
   }
   else{
-    result.innerHTML="please enter 10 digit number";
+    result.innerHTML="<p style='color: red; font-size: 15px;'>please enter 10 digit number";
+    popup.innerHTML="<p style='color: red; font-size: 20px;'>Please Fill Correct Data<p/>";
   }
 }
 </script>
