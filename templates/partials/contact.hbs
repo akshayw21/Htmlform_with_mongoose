@@ -98,10 +98,10 @@
 </div>
 
 <h1 align="center">Get In Touch</h1>
-<form action="/contact" method="POST" onsubmit="return myfun()">
+<form action="/contact" method="POST">
 <div class="container asd">
   <div class="inputs">
-    <input type="text" id="name" name="name" required>
+    <input type="text" id="name" name="name" pattern="[a-z]{0,10}" required>
     <label for="name">Name</label>
   </div>
 
@@ -111,8 +111,9 @@
   </div>
 
   <div class="inputs">
-    <input type="number" id="phone" name="phone" required>
+    <input type="text" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required>
     <label for="phone">Phone</label>
+    <p id="result"></p>
   </div>
 
   <div class="inputs">
@@ -122,7 +123,7 @@
 
   <div class="form-field col-lg-12">
     
-      <button type="submit" id="messages" class="btn btn-success" value="submit" data-bs-toggle="modal" data-bs-target="#add">Submit</button>
+      <button type="submit" id="messages" onclick="check()" class="btn btn-success" value="submit" data-bs-toggle="modal" data-bs-target="#">Submit</button>
   
 </div>
       
@@ -131,7 +132,7 @@
 </div>
 </form>
 
-<script>
+<!--<script>
   function myfun(){
     var a=document.getElementById("phone").value;
     if(a==""){
@@ -151,4 +152,18 @@
       return false;
     }
   }
+</script>-->
+
+<script>
+function check(){
+  var num=document.getElementById("phone").value;
+  var result=document.getElementById('result');
+
+  if(num.length==10){
+    result.innerHTML="correct";
+  }
+  else{
+    result.innerHTML="please enter 10 digit number";
+  }
+}
 </script>

@@ -17,15 +17,17 @@ const userSchema=mongoose.Schema({
         }
         
     },
+    ///\d{3}\d{3}\d{4}/
     phone:{
         type:Number,
         required:true,
-        // validate: {
-        //     validator: function(v) {
-        //       return /\d{3}-\d{3}-\d{4}/.test(v);
-        //     },
-        //     message: '{VALUE} is not a valid phone number!'
-        //   },
+    
+         validate: {
+             validator: function(v) {
+                 return /^[0-9]{10}/.test(v);
+             },
+             message: '{VALUE} is not a valid phone number!'
+           },
     },
     message:{
         type:String,
